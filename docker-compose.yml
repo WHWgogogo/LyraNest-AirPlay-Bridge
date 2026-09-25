@@ -1,0 +1,34 @@
+# LyraNest AirPlay Bridge - Docker Compose 部署配置
+#
+# 重要提示：network_mode 必须保持为 "host"！
+# AirPlay 2 协议依赖局域网 mDNS (224.0.0.251:5353) 组播探测音箱设备，
+# 且音箱接收端会回拨随机 UDP 端口进行 NTP 纳秒级时钟对齐与 RTP 音频推流。
+# 普通 Docker bridge 模式会阻断该入站流量导致设备离线或断音。
+
+services:
+  airplay-bridge:
+    image: ghcr.io/whwgogogo/lyranest-airplay-bridge:0.1.0
+    container_name: lyranest-airplay-bridge
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      BRIDGE_PORT: "8092"
+      BRIDGE_BIND: "0.0.0.0"
+      BRIDGE_TOKEN: "${AIRPLAY_BRIDGE_TOKEN:-}"
+      BRIDGE_ENGINE: "auto"
+      CLIAIRPLAY_PATH: "cliairplay"
+      FFMPEG_PATH: "ffmpeg"
+      BRIDGE_SAMPLE_RATE: "44100"
+      BRIDGE_CHANNELS: "2"
+      BRIDGE_BIT_DEPTH: "16"
+      BRIDGE_LATENCY_MS: "600"
+      BRIDGE_DEVICE_TTL_SECONDS: "60"
+      BRIDGE_DISCOVERY: "1"
+      LYRANEST_SERVER_URL: "${LYRANEST_SERVER_URL:-http://127.0.0.1:8080}"
+      BRIDGE_LOG_LEVEL: "info"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "-", "http://127.0.0.1:8092/healthz"]
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
