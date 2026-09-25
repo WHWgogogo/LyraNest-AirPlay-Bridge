@@ -1,0 +1,8 @@
+# Build output
+/bin/
+/dist/
+
+# Local verification artefacts
+/.verify/
+*.wav
+*.pipe

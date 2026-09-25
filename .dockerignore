@@ -1,0 +1,12 @@
+# Build context hygiene: the image is built from source only.
+bin/
+dist/
+.verify/
+*.wav
+*.pcm
+*.log
+scripts/
+README.md
+Dockerfile
+deploy/
+.git/
