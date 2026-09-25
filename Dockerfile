@@ -113,14 +113,3 @@ FROM runtime-base AS runtime-native
 
 ENV BRIDGE_ENGINE=native
 
-# ---------------------------------------------------------------------------
-# Stage 3c: use a kernel you already have
-#
-# Build with:
-#   docker build --target runtime-local -t lyranest/airplay-bridge:local .
-# after placing the binary at bin/cliairplay.
-# ---------------------------------------------------------------------------
-FROM runtime-base AS runtime-local
-
-COPY bin/cliairplay /usr/local/bin/cliairplay
-RUN chmod 0755 /usr/local/bin/cliairplay
