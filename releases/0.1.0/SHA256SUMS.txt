@@ -1,0 +1,11 @@
+e5b4f9ea72e551e22c8092e64c4a4b23a5f724cdc8766205c31d37f9d355b60f  LyraNest-AirPlay-Bridge-0.1.0-cwnas.cpk
+dda14131fb53d03b37466bfdc34e3c6684fd817065944da13a82cfaf24eabcf8  LyraNest-AirPlay-Bridge-0.1.0-fnos-arm.fpk
+71bc6f7951febb949f454d6e7d922f944fd52bf800b54e6bbe6737e4bbbbb8ad  LyraNest-AirPlay-Bridge-0.1.0-fnos-x86.fpk
+843fdc57101c281d30b0b347d1fddad41dd4d9f4164db3e662cc0426844d8fce  LyraNest-AirPlay-Bridge-0.1.0-qnap-arm_64.qpkg
+a0f25dd0e772ee9ad0b7e4b663ff93eee8f3b1d12d18334cb945501162231613  LyraNest-AirPlay-Bridge-0.1.0-qnap-x86_64.qpkg
+71ce7dbfb5fcf2555c43b56d18747672202ea2b07d355e108b425fe2cdde7764  LyraNest-AirPlay-Bridge-0.1.0-synology-armv8.spk
+f8be0a6ff035cf2a5ad443a604d737b34959caa6c7b0a9fe559df03948aa2c3d  LyraNest-AirPlay-Bridge-0.1.0-synology-x86_64.spk
+fa39c59e4b4b2ea9c5a7a80b7ab7ba125a090ccffb0e3544394bd9d0c62a6467  LyraNest-AirPlay-Bridge-0.1.0-terramaster-aarch64.deb
+a2b944fa7ed74e54c0c075787ceabf4daa763f27f5e230735dd438e46b4a8a46  LyraNest-AirPlay-Bridge-0.1.0-terramaster-x86_64.deb
+0969ce0a9cab9eb96b43fde897367f793091ddd89239e48450add0148acff61c  LyraNest-AirPlay-Bridge-0.1.0-ugnas-amd64.upk
+3fe38bc483dd9ca26f093b66de341f2e592789e02627d47736ec3fa1ffa8ba15  LyraNest-AirPlay-Bridge-0.1.0-ugnas-arm64.upk
